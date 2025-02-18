@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<div class="page-content page-container" id="page-content">
+ 
+        <div class="container d-flex justify-content-center align-items-center min-vh-100">
+<div class="col-xl-8 col-md-12">
+											<div class="row">
+                                                <div class="card user-card-full">
+                                                    <div class="row m-l-0 m-r-0">
+                                                        <div class="col-sm-4 bg-c-lite-green user-profile">
+                                                            <div class="card-block text-center text-white">
+                                                                <div class="m-b-30">
+                                                                    <img src="https://img.icons8.com/bubbles/100/000000/user.png" class="img-radius" alt="User-Profile-Image">
+                                                                </div>
+                                                                <h6 class="f-w-800">Nguyễn Thị Ngọc Hiếu</h6>
+                                                                <h6>Sinh viên</h6>
+                                                                <i class=" mdi mdi-square-edit-outline feather icon-edit m-t-10 f-16"></i>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-8">
+                                                            <div class="card-block">
+                                                                <h6 class="m-b-20 p-b-5 b-b-default f-w-700">Thông tin</h6>
+                                                                <div class="row">
+                                                                    <div class="col-sm-6">
+                                                                        <p class="m-b-10 f-w-700">Email</p>
+                                                                        <h6 class="text-muted f-w-400">hieu@gmail.com</h6>
+                                                                    </div>
+                                                                    <div class="col-sm-6">
+                                                                        <p class="m-b-10 f-w-700">Trường</p>
+                                                                        <h6 class="text-muted f-w-500">Đại học Nha Trang</h6>
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                                <div class="row">
+                                                                    <div class="col-sm-6">
+                                                                        <p class="m-b-10 f-w-700">MSSV</p>
+                                                                        <h6 class="text-muted f-w-500">64130668</h6>
+                                                                    </div>
+                                                                    <div class="col-sm-6">
+                                                                        <p class="m-b-10 f-w-700">Lớp</p>
+                                                                        <h6 class="text-muted f-w-500">64 CNTTCLC</h6>
+                                                                    </div>
+                                                               
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                             </div>
+                                                </div>
+                                                 </div>
+                                            
+</body>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css'></script>
+</html>
