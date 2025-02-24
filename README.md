@@ -17,6 +17,7 @@ Storing Programming Practice Exercises
 ![Image](https://github.com/user-attachments/assets/6de038df-992e-4040-a6ae-bfacd2781f3b)
 ![Image](https://github.com/user-attachments/assets/a614efeb-1247-4ad8-b69b-579df435351d)
 ![Image](https://github.com/user-attachments/assets/fd79a5ad-30d4-4269-8cbd-536382e38edb)
+![Image](https://github.com/user-attachments/assets/4f7090a6-e749-49a3-9763-6fdbe5f7c143)
 ## Bài 2.1 Ví dụ 2.1  [Chi tiết bài tập](https://github.com/hieuntn/64130668_Web2/tree/main/ViDu2_1)
 ![Image](https://github.com/user-attachments/assets/0b869555-3e70-467e-b7a7-9bd33d6c37bb)
 ## Bài 2.2 Ví dụ 2.2  [Chi tiết bài tập](https://github.com/hieuntn/64130668_Web2/tree/main/HelloJSP)
