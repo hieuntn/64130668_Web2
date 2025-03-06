@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Thông tin sinh viên</title>
+</head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+        .info {
+            line-height: 1.6;
+        }
+    </style>
+
+<body>
+    <h1>Thông tin sinh viên</h1>
+    <div class="info">
+        <p>MSSV: <span th:text="${mssv}"></span></p>
+        <p>Họ tên: <span th:text="${hoTen}"></span></p>
+        <p>Năm sinh: <span th:text="${namSinh}"></span></p>
+        <p>Giới tính: <span th:text="${gt}"></span></p>
+    </div>
+</body>
+</html>
