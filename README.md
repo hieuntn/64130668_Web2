@@ -29,3 +29,5 @@ Storing Programming Practice Exercises
 ![Image](https://github.com/user-attachments/assets/83666bda-6fc3-4660-93ee-f9c726d9ff62)
 ## Bài 4.1 SpringBoot  [Chi tiết bài tập](https://github.com/hieuntn/64130668_Web2/tree/main/HelloSpringBoot)
 ![Image](https://github.com/user-attachments/assets/f7a7090d-0aeb-4e52-9b06-539ec2699267)
+## Bài 4.2 Truyền dữ liệu từ Controller sang View  [Chi tiết bài tập](https://github.com/hieuntn/64130668_Web2/tree/main/HelloSpringBoot)
+![Image](https://github.com/user-attachments/assets/5ae090dc-42d2-41c0-a7f2-d381a759755e)
