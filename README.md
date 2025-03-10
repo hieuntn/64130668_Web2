@@ -1,5 +1,9 @@
 # 64130668_Web2
 Storing Programming Practice Exercises
+## Bài 4.1 SpringBoot  [Chi tiết bài tập](https://github.com/hieuntn/64130668_Web2/tree/main/HelloSpringBoot)
+![Image](https://github.com/user-attachments/assets/f7a7090d-0aeb-4e52-9b06-539ec2699267)
+## Bài 4.2 Truyền dữ liệu từ Controller sang View  [Chi tiết bài tập](https://github.com/hieuntn/64130668_Web2/tree/main/SB_TruyenDuLieuSangView)
+![Image](https://github.com/user-attachments/assets/5ae090dc-42d2-41c0-a7f2-d381a759755e)
 ## Bài 1 HelloWorld [Chi tiết bài tập](https://github.com/hieuntn/64130668_Web2/tree/c44bc6e75ce982c145711e1e4a0768789d764ca3/HelloHieu)
 ![Image](https://github.com/user-attachments/assets/bab03af0-bc76-4433-bde7-d9f44b82cec6)
 ## Bài 1.1 Ví dụ về doGet [Chi tiết bài tập](https://github.com/hieuntn/64130668_Web2/tree/d5acea4a364f27879c8bd869b93beadbfc64c802/ViDuDoGet)
@@ -27,7 +31,4 @@ Storing Programming Practice Exercises
 ![Image](https://github.com/user-attachments/assets/5299ae1c-2a9e-4b5a-9057-8fbdd3baa6b1)
 ## Bài 3.1 Maven Spring MVC  [Chi tiết bài tập](https://github.com/hieuntn/64130668_Web2/tree/main/SpringMVCBai1)
 ![Image](https://github.com/user-attachments/assets/83666bda-6fc3-4660-93ee-f9c726d9ff62)
-## Bài 4.1 SpringBoot  [Chi tiết bài tập](https://github.com/hieuntn/64130668_Web2/tree/main/HelloSpringBoot)
-![Image](https://github.com/user-attachments/assets/f7a7090d-0aeb-4e52-9b06-539ec2699267)
-## Bài 4.2 Truyền dữ liệu từ Controller sang View  [Chi tiết bài tập](https://github.com/hieuntn/64130668_Web2/tree/main/HelloSpringBoot)
-![Image](https://github.com/user-attachments/assets/5ae090dc-42d2-41c0-a7f2-d381a759755e)
+
