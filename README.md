@@ -1,5 +1,7 @@
 # 64130668_Web2
 Storing Programming Practice Exercises
+## Bài 4.2 Truyền dữ liệu từ Controller sang View dưới dạng danh sách [Chi tiết bài tập](https://github.com/hieuntn/64130668_Web2/tree/main/SB_TruyenDuLieuSangView)
+![Image](https://github.com/user-attachments/assets/170b922d-d067-4427-b69a-e2425ce4df4d)
 ## Bài 4.1 SpringBoot  [Chi tiết bài tập](https://github.com/hieuntn/64130668_Web2/tree/main/HelloSpringBoot)
 ![Image](https://github.com/user-attachments/assets/f7a7090d-0aeb-4e52-9b06-539ec2699267)
 ## Bài 4.2 Truyền dữ liệu từ Controller sang View  [Chi tiết bài tập](https://github.com/hieuntn/64130668_Web2/tree/main/SB_TruyenDuLieuSangView)
