@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Thông tin của 1 sinh viên</title>
+</head>
+<body>
+<h1>Thông tin sinh viên</h1>
+    <p><strong>MSSV:</strong> <span th:text="${sinhVien.mssv}"></span></p>
+    <p><strong>Họ tên:</strong> <span th:text="${sinhVien.hoTen}"></span></p>
+    <p><strong>Năm sinh:</strong> <span th:text="${sinhVien.namSinh}"></span></p>
+    <p><strong>Giới tính:</strong> <span th:text="${sinhVien.gioiTinh}"></span></p>
+</body>
+</html>

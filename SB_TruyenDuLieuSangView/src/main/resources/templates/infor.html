@@ -3,24 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <title>Thông tin sinh viên</title>
+    <!-- Link đến file CSS riêng -->
+   <link rel="stylesheet" th:href="@{/index.css}">
 </head>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 50px;
-        }
-        .info {
-            line-height: 1.6;
-        }
-    </style>
-
 <body>
-    <h1>Thông tin sinh viên</h1>
-    <div class="info">
-        <p>MSSV: <span th:text="${mssv}"></span></p>
-        <p>Họ tên: <span th:text="${hoTen}"></span></p>
-        <p>Năm sinh: <span th:text="${namSinh}"></span></p>
-        <p>Giới tính: <span th:text="${gt}"></span></p>
-    </div>
+    <h1>DANH SÁCH SINH VIÊN</h1>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>MSSV</th>
+                <th>Họ tên</th>
+                <th>Năm sinh</th>
+                <th>Giới tính</th>
+            </tr>
+        </thead>
+        <tbody>
+           
+            <tr th:each="sv : ${dssV}">
+                <td th:text="${sv.mssv}"></td>
+                <td th:text="${sv.hoTen}"></td>
+                <td th:text="${sv.namSinh}"></td>
+                <td th:text="${sv.gioiTinh}"></td>
+            </tr>
+        </tbody>
+    </table>
+    
+    
 </body>
 </html>
