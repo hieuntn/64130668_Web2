@@ -1,5 +1,7 @@
 # 64130668_Web2
 Storing Programming Practice Exercises
+## Bài 4.4 Lấy dữ liệu từ tham số dạng GET, POST (BMI) [Chi tiết bài tập]()
+![Image](https://github.com/user-attachments/assets/1d3191fa-c124-47e7-9315-eac263dfee30)
 ## Bài 4.4 Lấy dữ liệu từ tham số dạng GET, POST [Chi tiết bài tập]()
 ![Image](https://github.com/user-attachments/assets/486a2711-2aa1-49b6-aeab-fba03a707100)
 ## Bài 4.3 Truyền dữ liệu từ Controller sang View dưới dạng danh sách [Chi tiết bài tập](https://github.com/hieuntn/64130668_Web2/tree/main/SB_TruyenDuLieuSangView)
