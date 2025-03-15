@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" th:href="@{/css/index.css}">
+</head>
+<body>
+    <div class="calculator">
+        <h2>Công cụ tính BMI</h2>
+        
+       
+        <div class="error-message" th:if="${error}" th:text="${error}"></div>
+        
+       
+        <form th:action="@{/calculate-bmi}" method="get">
+            <div class="form-group">
+                <label for="canNang">Cân nặng:</label>
+                <input id="canNang" name="canNang" type="number" step="0.01" value="70" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="chieuCao">Chiều cao (m):</label>
+                <input id="chieuCao" name="chieuCao" type="number" step="0.01" value="1.65" required>
+            </div>
+            
+            <button type="submit">Tính BMI</button>
+        </form>
+        
+       
+        <div id="result" th:if="${Bmi}">
+            <p>Cân nặng: <span th:text="${canNang} + ' kg'"></span></p>
+            <p>Chiều cao: <span th:text="${chieuCao} + ' m'"></span></p>
+            <p>BMI: <span th:text="${Bmi}"></span></p>
+            <p>Phân loại: <span th:text="${xepLoai}"></span></p>
+        </div>
+    </div>
+</body>
+</html>
