@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Trang chủ</title>
+</head>
+<body>
+    <table border="1">
+    <tr>
+        <td colspan="2">
+            Header
+            <div th:replace="FragmentLayout/fragments :: Header"></div>
+        </td>
+    </tr>
+    <tr>
+        <td width="500px">Nội dung chính</td>
+        <td>
+            Sidebar
+            <div th:replace="FragmentLayout/fragments :: SideBar"></div>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+             Footer
+            <div th:replace="FragmentLayout/fragments :: Footer"></div>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
