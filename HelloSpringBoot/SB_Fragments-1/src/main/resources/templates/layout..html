@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <!-- Liên kết CSS (không cần thiết vì đã liên kết trong home.html) -->
+    <!-- <link rel="stylesheet" th:href="@{/css/style.css}" href="/css/style.css"> -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div th:fragment="Header" class="header">
+        <a href="#" class="logo"><span>Hieu</span>Nguyen</a>
+        <nav class="navbar">
+            <a href="#">About me</a>
+            <a href="#">Education</a>
+            <a href="#">Experience</a>
+            <a href="#">Project</a>
+        </nav>
+        <a href="#" class="contact">Contact Me</a>
+    </div>
+    <div th:fragment="Footer" class="footer">
+        <div class="social">
+            <a href=""><i class='bx bxl-facebook-circle'></i></a>
+            <a href=""><i class='bx bxl-linkedin'></i></a>
+            <a href=""><i class='bx bxl-twitter'></i></a>
+        </div>
+        <ul class="list">
+            <li>
+                <a href="#">FAQ</a>
+            </li>
+            <li>
+                <a href="#">Services</a>
+            </li>
+            <li>
+                <a href="#">About Me</a>
+            </li>
+            <li>
+                <a href="#">Contact Me</a>
+            </li>
+            <li>
+                <a href="#">Privacy Policy</a>
+            </li>
+        </ul>
+        <p class="copyright">© 2025 Hieu Nguyen | All Rights Reserved</p>
+    </div>
+</body>
+</html>
