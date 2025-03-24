@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
+    <!-- Liên kết CSS -->
+    <link rel="stylesheet" th:href="@{/css/style.css}" href="/css/style.css">
+    <!-- Liên kết Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Liên kết font Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Fragment Header -->
+    <div th:replace="layout/header :: header"></div>
+    <section class="home">
+        <div class="home-content">
+            <h3>Hi</h3>
+            <h1>I'm <span>Hieu Nguyen<br></span>a Student</h1>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis inventore dolore esse dicta consequatur fugit nihil perspiciatis culpa omnis ex incidunt commodi error illum, minus ab quos ducimus ipsa dignissimos!
+            </p>
+            <div class="bnt-box">
+                <button class="bnt-1">About me</button>
+                <button class="bnt-2">Experience</button>
+            </div>
+        </div>
+        <div class="img-box">
+            <img th:src="@{/img/img112.jpg}" src="/img/img112.jpg" alt="">
+        </div>
+    </section>
+    <!-- Fragment Footer -->
+   <div th:replace ="layout/footer :: footer" ></div>
+</body>
+</html>
