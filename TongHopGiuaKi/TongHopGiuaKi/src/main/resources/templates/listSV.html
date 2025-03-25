@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<!-- Liên kết CSS -->
+   <link rel="stylesheet" th:href="@{/css/list.css}" href="/css/list.css">
+    <!-- Liên kết font Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+<title>List</title>
+</head>
+<body>
+<!-- Fragment Header -->
+    <div th:replace="layout/header :: header"></div>
+    <section class ="container">
+    <h1>DANH SÁCH SINH VIÊN</h1>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>MSSV</th>
+                <th>Họ tên</th>
+                <th>Điểm TB</th>
+               
+            </tr>
+        </thead>
+        <tbody>
+           
+            <tr th:each="sv : ${dsSinhVien}">
+                <td th:text="${sv.mSSV}"></td>
+                <td th:text="${sv.hoTen}"></td>
+                <td th:text="${sv.diemTB}"></td>
+            </tr>
+        </tbody>
+    </table>
+    </section>
+    
+<!-- Fragment Footer -->
+   <div th:replace ="layout/footer :: footer" ></div>
+</body>
+</html>
