@@ -10,7 +10,9 @@ public class SinhVien {
 		        this.hoTen = hoTen;
 		        this.diemTB = diemTB;
 		    }
-
+		    public SinhVien() {
+		    	super();
+		    }
 		    
 		    public String getMSSV() {
 		        return mSSV;

@@ -4,6 +4,8 @@ import java.util.List;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import hieuntn.edu.kt.Model.SinhVien;
 
@@ -32,6 +34,17 @@ public class OnTapGiuaKi {
 		return "listSV";
 		
 	}
-	
-	
+	@GetMapping("/addNew")
+	public String formAddNew(ModelMap m) {
+	    SinhVien sv = new SinhVien();
+	    m.addAttribute("sinhVienMoi", sv); 
+	    return "form";
+	}
+
+	@PostMapping("/addNew")
+	public String submitForm(@ModelAttribute("sinhVienMoi") SinhVien sv) {
+	    dsSV.add(sv);
+	    return "redirect:/studentList"; 
+	}
+
 }
