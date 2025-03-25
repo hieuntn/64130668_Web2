@@ -1,5 +1,8 @@
 # 64130668_Web2
 Storing Programming Practice Exercises
+
+## Bài 4.5 Chia giao diện sử dụng Fragment Layout  [Chi tiết bài tập](https://github.com/hieuntn/64130668_Web2/tree/main/SB_Fragments-1)
+![Image](https://github.com/user-attachments/assets/2db917ab-5bb7-4a8e-8d34-e85861e09ea8)
 ## Bài 4.4 Lấy dữ liệu từ tham số dạng GET, POST (BMI) [Chi tiết bài tập]()
 ![Image](https://github.com/user-attachments/assets/1d3191fa-c124-47e7-9315-eac263dfee30)
 ![Image](https://github.com/user-attachments/assets/0df6f159-2319-4b69-bc87-401b4f93d4a4)
