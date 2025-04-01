@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<!-- Liên kết CSS -->
+   <link rel="stylesheet" th:href="@{/css/addNew.css}" href="/css/addNew.css">
+    <!-- Liên kết font Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+<title>Add New</title>
+</head>
+<body>
+<!-- Fragment Header -->
+    <div th:replace="layout/header :: header"></div>
+    <section class="container">
+	<h1>Thêm Topic Mới</h1>
+    <form th:action="@{/addNew}" method="post" th:object="${sinhVienMoi}">
+        <label>Id :</label>
+        <input type="text" th:field="*{id}" required/><br/>
+
+        <label>topic Name:</label>
+        <input type="text" th:field="*{name}" required/><br/>
+
+        <label>GroupId:</label>
+        <input type="text" th:field="*{supervisorId}" required/><br/>
+        <label>GroupId:</label>
+        <input type="text" th:field="*{hoTen}" required/><br/>
+       
+        <label>topicType:</label>
+        <input type="text" th:field="*{hoTen}" required/><br/>
+    </form>
+    </section>
+<!-- Fragment Footer -->
+   <div th:replace ="layout/footer :: footer" ></div>
+</body>
+</html>

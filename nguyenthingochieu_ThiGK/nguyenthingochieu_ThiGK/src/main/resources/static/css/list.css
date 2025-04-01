@@ -1,0 +1,128 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 12%;
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column; /* Stack the banner and navbar vertically */
+    align-items: stretch; /* Stretch items to fill the width */
+    z-index: 100;
+}
+
+
+span {
+    color: orangered;
+}
+
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 50px;
+    padding: 10px 20px; 
+    margin-top: 40px; 
+}
+
+.navbar a {
+    font-size: 23px;
+    color: white;
+    font-weight: 600;
+    flex: none;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.navbar a:hover {
+    color: orangered;
+    border-bottom: 3px solid orangered;
+}
+
+.navbar a.active {
+    color: orangered;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: rgb(241, 241, 241);
+    display: flex;
+    flex-direction: column; /* Sắp xếp các phần tử theo cột */
+    align-items: center;
+    gap: 20px; /* Tạo khoảng cách giữa các phần tử */
+    padding: 70px 12% 0; /* Giữ khoảng cách từ trên xuống */
+    text-align: center; /* Căn giữa tiêu đề */
+}
+
+h1 {
+    color: orangered;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 100px;
+    text-transform: uppercase;
+    
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    font-size: 18px;
+    background: white;
+}
+
+th, td {
+    border: 1px solid #008000;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: orangered;
+    color: white;
+}
+
+
+
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: orangered;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgba(0,0,0,0.6);
+    width: 50px;
+}
+.footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 40px 0;
+    background-color: black;
+}
+
+.footer .copyright{
+    margin-top: 15px;
+    text-align: center;
+    font-size: 17px;
+    color: white;
+}
