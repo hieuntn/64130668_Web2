@@ -1,6 +1,8 @@
 # 64130668_Web2
 Storing Programming Practice Exercises
-## Chữa bài giữa kì
+## Làm lại bài giữa kì
+![image](https://github.com/user-attachments/assets/6444b755-578a-4f88-9da3-88b465a43ec7)
+
 
 
 ## Bài  Ôn tập giữa kì  [Chi tiết bài tập]()
