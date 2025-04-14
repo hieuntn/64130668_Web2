@@ -1,25 +1,30 @@
 # 64130668_Web2
 Storing Programming Practice Exercises
 ## Làm lại bài giữa kì
-![image](https://github.com/user-attachments/assets/6444b755-578a-4f88-9da3-88b465a43ec7)
-![image](https://github.com/user-attachments/assets/2ee0144c-b50f-4a86-a424-ed2989e81833)
-![image](https://github.com/user-attachments/assets/b47c3ac9-8ba4-4e0b-ac81-ab5e10a59786)
+
 <table>
   <tr>
-    <td align="center">
-      
-     
-      <img src="https://github.com/user-attachments/assets/6444b755-578a-4f88-9da3-88b465a43ec7" width="45%">
-      <img src="https://github.com/user-attachments/assets/2ee0144c-b50f-4a86-a424-ed2989e81833" width="45%">
-      
-      <br> 
-      
-      <!-- Hàng 2 - 2 ảnh -->
-      <img src="https://github.com/user-attachments/assets/b47c3ac9-8ba4-4e0b-ac81-ab5e10a59786" width="45%">
-      <img src="URL_ẢNH_4" width="45%">
-    </td>
+    <th>id</th>
+    <th rowspan="2"></th>
+  </tr>
+  <tr>
+    <td align="center">id align='center'</td>
   </tr>
 </table>
+
+---
+
+<!-- Hàng ảnh 1 -->
+<img src="https://github.com/user-attachments/assets/6444b755-578a-4f88-9da3-88b465a43ec7" width="200" />
+<img src="https://github.com/user-attachments/assets/2ee0144c-b50f-4a86-a424-ed2989e81833" width="200" />
+
+<br>
+
+---
+
+<!-- Hàng ảnh 2 -->
+<img src="https://github.com/user-attachments/assets/b47c3ac9-8ba4-4e0b-ac81-ab5e10a59786" width="200" />
+<img src="https://github.com/usr-attachment/sheets/button.png" width="200" />
 
 
 
