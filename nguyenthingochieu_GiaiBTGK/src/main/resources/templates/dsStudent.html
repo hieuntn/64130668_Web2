@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Student - List</title>
+<!-- Liên kết CSS -->
+   <link rel="stylesheet" th:href="@{/css/studentList.css}" href="/css/studentList.css">
+    <!-- Liên kết font Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<body>
+<!-- Fragment Side bar -->
+    <div th:replace="layout/header :: header"></div>
+<!-- Fragment Top bar -->
+     <div th:replace="layout/topbar :: topbar"></div>
+     
+    <section class ="container">
+    <h1>STUDENT LIST</h1>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Group Id</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr th:each="st : ${listST}">
+                <td th:text="${st.id}"></td>
+                <td th:text="${st.name}"></td>
+                <td th:text="${st.groupId}"></td>
+                <td>
+                    <a th:href="@{/students/view/{id}(id=${st.id})}" class="action-link">View</a> |
+                    <a th:href="@{/students/edit/{id}(id=${st.id})}" class="action-link">Edit</a> |
+                    <a th:href="@{/students/delete/{id}(id=${st.id})}" class="action-link" onclick="return confirm('Are you sure?')">Delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <div class="add-button">
+        <a th:href="@{/students/add}" class="action-link">Add New Student</a>
+    </div>
+    
+    </section>
+    
+<!-- Fragment Footer -->
+   <div th:replace ="layout/footer :: footer" ></div>
+</body>
+</html>
