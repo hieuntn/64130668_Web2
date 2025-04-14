@@ -1,6 +1,6 @@
 # 64130668_Web2
 Storing Programming Practice Exercises
-## Làm lại bài giữa kì
+## Làm lại bài giữa kì [Chi tiết bài tập](https://github.com/hieuntn/64130668_Web2/tree/main/nguyenthingochieu_GiaiBTGK)
 
 
 
