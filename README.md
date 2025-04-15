@@ -20,11 +20,7 @@ Storing Programming Practice Exercises
 
 
 ## Bài  Ôn tập giữa kì  [Chi tiết bài tập]()
-![image](https://github.com/user-attachments/assets/c12bb7cf-0c1f-44bf-b0d4-28b6bc45d57e)
-![image](https://github.com/user-attachments/assets/0cb322cf-4554-4465-810f-e4c4ed080866)
-![image](https://github.com/user-attachments/assets/308d05f1-ba24-402c-83cd-15fe873c1ca9)
-![image](https://github.com/user-attachments/assets/85279964-79b7-4be5-9dd5-2133ca02647f)
-![image](https://github.com/user-attachments/assets/44e4240d-7127-4fda-909a-6137415c356d)
+
 
 ## Bài 4.5 Chia giao diện sử dụng Fragment Layout  [Chi tiết bài tập](https://github.com/hieuntn/64130668_Web2/tree/main/TongHopGiuaKi)
 
