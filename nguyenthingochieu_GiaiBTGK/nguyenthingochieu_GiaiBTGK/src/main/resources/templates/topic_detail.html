@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title >Detail Topic</title>
+    
+ <!-- Liên kết CSS -->
+    <link rel="stylesheet" th:href="@{/css/detailTopic.css}">
+    <!-- Liên kết font Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<body>
+<!-- Fragment Header -->
+     <div th:replace ="layout/header :: header" ></div>
+<!-- Fragment Top bar -->
+     <div th:replace ="layout/topbar :: topbar" ></div>
+    <div class="topic-container">
+        <!-- Tiêu đề đề tài -->
+        <h1 th:text="${topic.topicName}"></h1>
+        
+        <!-- Chi tiết đề tài -->
+        <div class="detail-row">
+            <span class="label">ID:</span>
+            <span th:text="${topic.id}"></span>
+        </div>
+        
+        <div class="detail-row">
+            <span class="label">Topic Type:</span>
+            <span th:text="${topic.topicType}"></span>
+        </div>
+        
+        <div class="detail-row">
+            <span class="label">Supervisor Id: </span>
+            <span th:text="${topic.supervisorId}"></span>
+        </div>
+        
+        <div class="detail-row">
+            <span class="label">Description:</span>
+            <span th:text="${topic.topicDescription}"></span>
+        </div>
+        
+        <!-- Nút quay lại -->
+        <a th:href="@{/topic/all}" class="back-link">
+            ← Back to list page
+        </a>
+    </div>
+      <!-- Fragment Footer -->
+   <div th:replace ="layout/footer :: footer" ></div>
+</body>
+</html>

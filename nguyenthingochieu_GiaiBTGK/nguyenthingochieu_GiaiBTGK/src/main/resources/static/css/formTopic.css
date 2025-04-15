@@ -1,0 +1,154 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background: rgb(241, 241, 241);
+    color: black; 
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    flex: 1 0 auto;
+}
+
+.wrapper .sidebar {
+    background: #ffff;
+    width: 380px;
+    height: 100vh;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    
+}
+
+
+
+.menu-table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+
+
+.menu-table td {
+  padding: 15px 12px;
+  border-bottom: 1px solid #eee;
+  transition: background-color 0.3s;
+}
+
+.menu-table tr:hover td {
+  background-color: #f5f5f5;
+}
+
+.menu-link {
+  color: #333;
+  text-decoration: none;
+  display: block;
+  padding: 12px 0;
+}
+
+.menu-link:hover {
+  color: #ff4500;
+}
+
+.menu-link b {
+  color: #2c3e50;
+}
+
+.top-bar {
+    background-color: orangered;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: flex-end;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 0 0 5px 5px;
+}
+.container {
+    margin-left: 500px; 
+    margin-top: 30px; 
+    padding: 20px;
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    
+}
+/* CSS cho form */
+form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 500px; 
+    margin: 10px auto 100px;
+  
+}
+/* CSS cho label và input */
+label {
+    display: block;
+    text-align:left;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #333;
+    
+    
+    
+
+   
+}
+
+input[type="text"]
+ {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+   
+    font-size: 14px;
+}
+/* CSS cho button */
+button {
+    width: 100%;
+    padding: 10px;
+    background: orangered; 
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+
+.footer {
+    width: 100%;
+    padding: 20px 0;
+    background-color: black;
+    margin-top: auto; 
+    position: relative;
+}
+
+.footer .copyright {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 17px;
+    color: white;
+}

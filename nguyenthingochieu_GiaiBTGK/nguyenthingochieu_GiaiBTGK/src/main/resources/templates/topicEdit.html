@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${pageTitle}">Edit Topic</title>
+    <!-- Liên kết CSS -->
+    <link rel="stylesheet" th:href="@{/css/topicEdit.css}">
+    <!-- Liên kết font Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- Fragment Header -->
+     <div th:replace ="layout/header :: header" ></div>
+<!-- Fragment Top bar -->
+     <div th:replace ="layout/topbar :: topbar" ></div>
+    <h1 th:text="${pageTitle}"></h1>
+
+    <form th:action="@{'/topic/edit/' + ${topic.id}}" th:object="${topic}" method="post">
+        <label>ID:</label>
+        <input type="text" th:field="*{id}" readonly /><br/>
+
+        <label>Topic Name :</label>
+        <input type="text" th:field="*{topicName}" required /><br/>
+
+        <label>Description:</label>
+        <textarea th:field="*{topicDescription}" required></textarea><br/>
+
+        <label>Supervisor Id:</label>
+        <input type="text" th:field="*{supervisorId}" required /><br/>
+
+        <label>Topic Type:</label>
+        <input type="text" th:field="*{topicType}" required /><br/>
+
+        <button type="submit">Save</button>
+        <a th:href="@{/topic/all}">Cancel</a>
+    </form>
+     <!-- Fragment Footer -->
+   <div th:replace ="layout/footer :: footer" ></div>
+</body>
+</html>

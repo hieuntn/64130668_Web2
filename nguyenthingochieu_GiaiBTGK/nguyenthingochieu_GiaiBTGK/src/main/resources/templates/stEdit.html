@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title >Edit Student</title>
+    <!-- Liên kết CSS -->
+    <link rel="stylesheet" th:href="@{/css/studentEdit.css}">
+    <!-- Liên kết font Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- Fragment Header -->
+     <div th:replace ="layout/header :: header" ></div>
+<!-- Fragment Top bar -->
+     <div th:replace ="layout/topbar :: topbar" ></div>
+    <h1 th:text="${pageTitle}"></h1>
+
+    <form th:action="@{'/student/edit/' + ${student.id}}" th:object="${student}" method="post">
+        <label>ID:</label>
+        <input type="text" th:field="*{id}" readonly /><br/>
+
+        <label>Name  :</label>
+        <input type="text" th:field="*{name}" required /><br/>
+
+        <label>Group Id:</label>
+        <input type="text" th:field="*{groupId}" required /><br/>
+
+       
+
+        <button type="submit">Save</button>
+        <a th:href="@{/student/all}">Cancel</a>
+    </form>
+     <!-- Fragment Footer -->
+   <div th:replace ="layout/footer :: footer" ></div>
+</body>
+</html>

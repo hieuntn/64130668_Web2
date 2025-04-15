@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Header</title>
+    
+</head>
+<body>
+    <section class="header" th:fragment="header">
+        <div class="wrapper">
+            <div class="sidebar">
+                <div class="logo">
+                    <img src="/img/img1.png" alt="Logo" th:src="@{/img/img1.png}">
+                </div>
+                <table class="menu-table">
+                    <tr>
+                        <td><a href="/" class="menu-link"><b>Dashboard</b></a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="/topic/all" class="menu-link">Topic - List</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="/topic/new" class="menu-link">Topic - AddNew</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="/student/all" class="menu-link">Student - List</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#" class="menu-link">Student - AddNew</a></td>
+                    </tr>
+                </table>
+            </div>
+          
+            
+        </div>   
+        
+    </section>
+</body>
+</html>
