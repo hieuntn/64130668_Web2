@@ -21,6 +21,7 @@ Storing Programming Practice Exercises
 
 <img src="https://github.com/user-attachments/assets/048e1083-7632-4049-9284-e44be9b56829" width="200" />
 <img src="https://github.com/user-attachments/assets/a27b9491-b6d7-4314-af7a-6842975c81a2" width="200" />
+<img src="https://github.com/user-attachments/assets/538c5762-81f0-4adb-8f5c-fc0b6825321b" width="200" />
 
 
 ## Bài  Ôn tập giữa kì  [Chi tiết bài tập]()
