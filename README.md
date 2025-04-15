@@ -1,6 +1,6 @@
 # 64130668_Web2
 Storing Programming Practice Exercises
-## Làm lại bài giữa kì
+## Làm lại bài giữa kì [Chi tiết bài tập](https://github.com/hieuntn/64130668_Web2/tree/main/nguyenthingochieu_GiaiBTGK)
 
 
 
@@ -10,21 +10,22 @@ Storing Programming Practice Exercises
 <img src="https://github.com/user-attachments/assets/6444b755-578a-4f88-9da3-88b465a43ec7" width="200" />
 <img src="https://github.com/user-attachments/assets/2ee0144c-b50f-4a86-a424-ed2989e81833" width="200" />
 <img src="https://github.com/user-attachments/assets/b47c3ac9-8ba4-4e0b-ac81-ab5e10a59786" width="200" />
+<img src="https://github.com/user-attachments/assets/c1a71259-5dc1-4939-8b04-62be2cd47ac8" width="200" />
+
+
 <br>
 
 ---
 
 <!-- Hàng ảnh 2 -->
 
-
+<img src="https://github.com/user-attachments/assets/048e1083-7632-4049-9284-e44be9b56829" width="200" />
+<img src="https://github.com/user-attachments/assets/a27b9491-b6d7-4314-af7a-6842975c81a2" width="200" />
+<img src="https://github.com/user-attachments/assets/538c5762-81f0-4adb-8f5c-fc0b6825321b" width="200" />
 
 
 ## Bài  Ôn tập giữa kì  [Chi tiết bài tập]()
-![image](https://github.com/user-attachments/assets/c12bb7cf-0c1f-44bf-b0d4-28b6bc45d57e)
-![image](https://github.com/user-attachments/assets/0cb322cf-4554-4465-810f-e4c4ed080866)
-![image](https://github.com/user-attachments/assets/308d05f1-ba24-402c-83cd-15fe873c1ca9)
-![image](https://github.com/user-attachments/assets/85279964-79b7-4be5-9dd5-2133ca02647f)
-![image](https://github.com/user-attachments/assets/44e4240d-7127-4fda-909a-6137415c356d)
+
 
 ## Bài 4.5 Chia giao diện sử dụng Fragment Layout  [Chi tiết bài tập](https://github.com/hieuntn/64130668_Web2/tree/main/TongHopGiuaKi)
 
