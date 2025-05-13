@@ -64,12 +64,16 @@ public class NKHController {
         model.addAttribute("hocVi", hocVi);
         return "nkh-list";
     }
-    @GetMapping("/{nkhId}/detail")
+    @GetMapping("/nkh/{nkhId}/detail")
     public String getNkhDetail(@PathVariable Integer nkhId, Model model) {
         try {
             NKH nkh = nkhService.getNkhById(nkhId);
+            long tongSoBao = nkhService.getTongBaiBaoByNkhId(nkhId);
+            long tongSoSach = nkhService.getTongSoSachByNkhId(nkhId);
             long tongSoDeTai = nkhService.getTongSoDeTaiByNkhId(nkhId);
             model.addAttribute("nkh", nkh);
+            model.addAttribute("tongSoBao", tongSoBao);
+            model.addAttribute("tongSoSach", tongSoSach);
             model.addAttribute("tongSoDeTai", tongSoDeTai);
         } catch (RuntimeException e) {
             model.addAttribute("errorMessage", e.getMessage());

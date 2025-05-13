@@ -52,7 +52,25 @@ public class NKH {
     )
     @JsonManagedReference
     private Set<DeTaiKH> nkh_nghiencuu = new HashSet<>();
-
+    
+    
+    @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @JoinTable(
+        name = "tacgiasach",
+        joinColumns = @JoinColumn(name = "NKH_ID"),
+        inverseJoinColumns = @JoinColumn(name = "SACH_ID")
+    )
+    @JsonManagedReference
+    private Set<Sach> tacgia = new HashSet<>();
+    
+    @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @JoinTable(
+        name = "sangtac",
+        joinColumns = @JoinColumn(name = "NKH_ID"),
+        inverseJoinColumns = @JoinColumn(name = "TENBAIBAO_ID")
+    )
+    @JsonManagedReference
+    private Set<BaiBao> baiBaoSangTac = new HashSet<>();    
     // Getters and Setters
     public int getNkhId() { return nkhId; }
     public void setNkhId(int nkhId) { this.nkhId = nkhId; }
@@ -78,8 +96,27 @@ public class NKH {
     public void setHinhAnh(String hinhAnh) { this.hinhAnh = hinhAnh; }
     public Set<DeTaiKH> getNkh_nghiencuu() { return nkh_nghiencuu; }
     public void setNkh_nghiencuu(Set<DeTaiKH> nkh_nghiencuu) { this.nkh_nghiencuu = nkh_nghiencuu; }
+    
+    public Set<Sach> getTacGia(){return tacgia;}
+    public void setTacGia(Set<Sach> tacgia) {this.tacgia = tacgia;}
+    
+    public Set<BaiBao> getBaiBaoSangTac() {
+        return baiBaoSangTac;
+    }
 
+    public void setBaiBaoSangTac(Set<BaiBao> baiBaoSangTac) {
+        this.baiBaoSangTac = baiBaoSangTac;
+    }
+   
+    
     public int getTongSoDeTai() {
         return nkh_nghiencuu.size();
     }
+    public int getTongSach(){
+    	return tacgia.size();
+    }
+    public int getTongBaiBao() {
+    	return baiBaoSangTac.size();
+    }
+    
 }

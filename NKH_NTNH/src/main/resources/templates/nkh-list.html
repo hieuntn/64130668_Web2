@@ -62,7 +62,7 @@
         <p class="title" th:text="${nkh.hocVi}"></p>
         <p><strong>Ngành đào tạo:</strong> <span th:text="${nkh.nganhDaoTao}"></span></p>
         <p><strong>Chuyên ngành đào tạo:</strong> <span th:text="${nkh.chuyenMon}"></span></p>
-        <a class="detail-button">Chi tiết</a>
+     	 <a th:href="@{/nkh/{id}/detail(id=${nkh.nkhId})}" class="detail-button">Chi tiết</a>
         <a th:href="@{/nkh/edit/{id}(id=${nkh.nkhId})}" class="detail-button">Sửa</a> |
         <a th:href="@{/nkh/delete/{id}(id=${nkh.nkhId})}" class="detail-button" onclick="return confirm('Bạn có chắc chắn muốn xóa nhà khoa học này?')">Xóa</a>
     </div>

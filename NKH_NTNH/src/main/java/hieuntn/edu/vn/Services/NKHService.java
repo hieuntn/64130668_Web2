@@ -74,4 +74,19 @@ public class NKHService {
                 .orElseThrow(() -> new RuntimeException("Không tìm thấy nhà khoa học với ID: " + nkhId));
     }
     
+    
+    
+    @Transactional
+    public long getTongSoSachByNkhId(Integer nkhId) {
+        return nkhRepository.countSachByNkhId(nkhId);
+    }
+    
+    @Transactional
+    public long getTongBaiBaoByNkhId(Integer nkhId) {
+        return nkhRepository.countBaiBaoByNkhId(nkhId);
+    }
+
+    
+
+    
 }

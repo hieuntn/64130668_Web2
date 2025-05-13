@@ -14,4 +14,11 @@ public interface NKHRepository extends JpaRepository<NKH,Integer> {
 	    List<NKH> searchByKeywordAndHocVi(String keyword, String hocVi);
 	@Query("SELECT COUNT(dt) FROM NKH nkh JOIN nkh.nkh_nghiencuu dt WHERE nkh.nkhId = :nkhId")
     int countDeTaiByNkhId(@Param("nkhId") int nkhId);
+	
+	@Query("SELECT COUNT(dt) FROM NKH nkh JOIN nkh.tacgia dt WHERE nkh.nkhId = :nkhId")
+    int countSachByNkhId(@Param("nkhId") int nkhId);
+	// truy vấn đến tổng số bài báo của 1 nhà khoa học
+	@Query("SELECT COUNT(dt) FROM NKH nkh JOIN nkh.baiBaoSangTac dt WHERE nkh.nkhId = :nkhId")
+    int countBaiBaoByNkhId(@Param("nkhId") int nkhId);
+	
 }
