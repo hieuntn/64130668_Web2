@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<aside class="sidebar" th:fragment="sidebar">
+            <div class="logo">
+                <img src="image/TRƯỜNG ĐẠI HỌC NHA TRANG.png" alt="" style="width: 240px; height: 80px;">
+            </div>
+            <nav>
+                <a href="Trangchu.html" class="active"> Trang chủ</a>
+                <a th:href="@{/nhakhoahoc}">Nhà khoa học</a>
+                <a href="detaikhoahoc.html">Đề tài khoa học</a>
+                <a href="baibaokhoahoc.html">Bài báo khoa học</a>
+                <a href="sachvagiaotrinh.html">Sách và giáo trình</a>
+                <div class="dropdown">
+                    <button class="dropdown-toggle">Khác</button>
+                    <div class="dropdown-menu">
+                        <a href="giaithuong.html">Giải thưởng</a>
+                        <a href="congtrinhthuctien.html">Công trình thực tiễn</a>
+                        <a href="Sohuutritue.html">Sở hữu trí tuệ</a>
+
+
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropdown-toggle">Thống kê</button>
+                    <div class="dropdown-menu">
+                        <a href="Thongke/thongkenhakhoahoc.html">Nhà khoa học</a>
+                        <a href="Thongke/thongkedetaikhoahoc.html">Đề tài KHCN</a>
+                        <a href="Thongke/thongkebaibao.html">Bài báo Khoa học</a>
+                        <a href="Thongke/thongkesachvagiaotrinh.html">Sách & Giáo trình</a>
+                        <a href="Thongke/thongkecongtrinhthuctien.html">Công trình thực tiễn</a>
+                        <a href="Thongke/thongkegiaithuong.html">Giải thưởng</a>
+                        <a href="Thongke/thongkesohuutritue.html">Sở hữu trí tuệ</a>
+
+                    </div>
+                </div>
+            </nav>
+        </aside>
+	
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - CSDL KHCN</title>
+	<!-- Liên kết CSS -->
+    <link rel="stylesheet" th:href="@{/css/nkh_list.css}">
+
+</head>
+
+<body>
+    <div class="container">
+        <!-- Fragment side bar -->
+     <aside th:replace ="layout/sidebar :: sidebar" ></aside>
+
+        <!-- Main content -->
+        <main class="main">
+            <h1>Cơ sở dữ liệu Khoa học Công nghệ</h1>
+            <div>
+                <img src="image/banner-it-blue_060828881.jpg" alt="" style="width: 100%; height: 30vw;">
+                <!-- Topbar -->
+                <div class="topbar">
+                    <div class="user-info">
+                        <span><a href="#">Đăng nhập</a></span>
+                        <img src="https://i.pravatar.cc/40?img=3" alt="Avatar" class="avatars">
+                    </div>
+                </div>
+            </div>
+				<div th:if="${error}" class="error" th:text="${error}"></div>
+            <form th:action="@{/nkh/search}" method="get" class="search-container">
+                <h2><strong>Tìm Kiếm <span style="color:deeppink;">Nhà khoa học</span></strong></h2>
+                <input type="text" class="search-input" name="keyword" th:value="${keyword}" placeholder="🔍 Nhập từ khóa..." aria-label="Tìm kiếm nhà khoa học">
+                <select class="search-select" name="hocVi">
+                    <option value="" th:selected="${hocVi == null or hocVi == ''}">🔽 Chọn học vị</option>
+                    <option value="Tiến sĩ" th:selected="${hocVi == 'Tiến sĩ'}">Tiến sĩ</option>
+                    <option value="Thạc sĩ" th:selected="${hocVi == 'Thạc sĩ'}">Thạc sĩ</option>
+                </select>
+                <button type="submit" class="search-button">🔍 Tìm Kiếm</button>
+            </form>
+
+            <div class="content">
+                <div class="result-header">
+                    <div class="result-title">
+                        <h2>DỮ LIỆU NHÀ KHOA HỌC</h2>
+                        <div class="underline"></div>
+                    </div>
+                    <div class="result-info">
+                      
+                        <button class="export-btn">
+                            <i class="fa fa-file-excel-o"></i> XUẤT RA EXCEL
+                        </button>
+                    </div>
+                </div>
+
+                <div class="researcher-container">
+                    <div class="researcher-card" th:each="nkh : ${nkhList}">
+   						 <img th:src="${nkh.hinhAnh != null and nkh.hinhAnh != 'NULL' ? nkh.hinhAnh : 'img/picdefault.jpg'}" alt="avatar" class="avatar">
+    <div class="info">
+        <h3 class="name" th:text="${nkh.hoTen}"></h3>
+        <p class="title" th:text="${nkh.hocVi}"></p>
+        <p><strong>Ngành đào tạo:</strong> <span th:text="${nkh.nganhDaoTao}"></span></p>
+        <p><strong>Chuyên ngành đào tạo:</strong> <span th:text="${nkh.chuyenMon}"></span></p>
+        <a class="detail-button">Chi tiết</a>
+        <a th:href="@{/nkh/edit/{id}(id=${nkh.nkhId})}" class="detail-button">Sửa</a> |
+        <a th:href="@{/nkh/delete/{id}(id=${nkh.nkhId})}" class="detail-button" onclick="return confirm('Bạn có chắc chắn muốn xóa nhà khoa học này?')">Xóa</a>
+    </div>
+</div>
+                </div>
+            </div>
+        </main>
+    </div>
+     <!-- Fragment footer --> 
+    <footer th:replace="layout/footer::footer"></footer>
+
+</body>
+
+</html>
