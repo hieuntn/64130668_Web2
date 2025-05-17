@@ -21,6 +21,7 @@ public class NKHService {
     public List<NKH> getAllNKH() {
         return nkhRepository.findAll();
     }
+    
 
     public NKH findById(int nkhId) {
         return nkhRepository.findById(nkhId)
@@ -85,7 +86,10 @@ public class NKHService {
     public long getTongBaiBaoByNkhId(Integer nkhId) {
         return nkhRepository.countBaiBaoByNkhId(nkhId);
     }
-
+    
+    public List<NKH> findAll() {
+        return nkhRepository.findAll();
+    }
     
 
     

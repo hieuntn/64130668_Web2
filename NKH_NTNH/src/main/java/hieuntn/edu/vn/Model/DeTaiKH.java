@@ -1,26 +1,33 @@
 package hieuntn.edu.vn.Model;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import jakarta.persistence.*;
+
+import java.util.ArrayList;
 import java.util.Date;
-import java.util.HashSet;
-import java.util.Set;
+
+import java.util.List;
+
+
+import org.springframework.format.annotation.DateTimeFormat;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
 
 @Entity
 @Table(name = "detaikh")
 public class DeTaiKH {
 
     @Id
-    @Column(name = "DETAI_ID", length = 50)
+    @Column(name = "DETAI_ID")
     private String id;
 
-    @Column(name = "TENDETAI", length = 300)
+    @Column(name = "TENDETAI")
     private String tenDeTai;
 
-    @Column(name = "CAPDETAI", length = 100)
+    @Column(name = "CAPDETAI")
     private String capDeTai;
 
-    @Column(name = "DONVICHUTRI", length = 100)
+    @Column(name = "DONVICHUTRI") 
     private String donViChuTri;
 
     @Column(name = "MUCTIEU", columnDefinition = "TEXT")
@@ -33,22 +40,23 @@ public class DeTaiKH {
     private String ketQua;
 
     @Column(name = "NAMBATDAU")
-    @Temporal(TemporalType.DATE)
+    
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date namBatDau;
 
     @Column(name = "NAMKETTHUC")
-    @Temporal(TemporalType.DATE)
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date namKetThuc;
 
-    @Column(name = "TINHTRANG", length = 100)
+    @Column(name = "TINHTRANG")
     private String tinhTrang;
 
-    @Column(name = "XEPLOAI", length = 50)
+    @Column(name = "XEPLOAI")
     private String xepLoai;
 
     @ManyToMany(mappedBy = "nkh_nghiencuu")
     @JsonBackReference
-    private Set<NKH> nghienCuu = new HashSet<>();
+    private List<NKH> nghienCuu = new ArrayList<>();
 
     // Constructors
     public DeTaiKH() {}
@@ -92,6 +100,13 @@ public class DeTaiKH {
     public void setTinhTrang(String tinhTrang) { this.tinhTrang = tinhTrang; }
     public String getXepLoai() { return xepLoai; }
     public void setXepLoai(String xepLoai) { this.xepLoai = xepLoai; }
-    public Set<NKH> getNghienCuu() { return nghienCuu; }
-    public void setNghienCuu(Set<NKH> nghienCuu) { this.nghienCuu = nghienCuu; }
+    public List<NKH> getNghienCuu() {
+        return nghienCuu;
+    }
+
+    public void setNghienCuu(List<NKH> nghienCuu) {
+        this.nghienCuu = nghienCuu;
+    }
+
+
 }
