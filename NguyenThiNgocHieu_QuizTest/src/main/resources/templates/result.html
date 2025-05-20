@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Result</title>
+    <style>
+        :root {
+            --primary-color: #7252f3;
+            --primary-dark: #5e44d3;
+            --text-on-dark: #ffffff;
+            --text-primary: #333333;
+            --background-light: #f8f9fe;
+            --border-radius: 10px;
+            --shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--background-light);
+            color: var(--text-primary);
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .main-container {
+            max-width: 1100px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        .result-container {
+            background-color: #ffffff;
+            border-radius: var(--border-radius);
+            padding: 30px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            padding: 8px 15px;
+            border: 2px solid var(--primary-color);
+            border-radius: var(--border-radius);
+            transition: all 0.3s;
+        }
+
+        .back-link:hover {
+            background-color: var(--primary-color);
+            color: var(--text-on-dark);
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="result-container">
+            <h2>Kết quả</h2>
+            <p th:text="'Bạn đã trả lời đúng ' + ${result.score} + '/' + ${result.total} + ' câu hỏi!'"></p>
+            <p th:text="'Tỷ lệ: ' + ${result.percentage} + '%'"></p>
+            <a th:href="@{/quiz}" class="back-link">Quay lại danh sách bài kiểm tra</a>
+        </div>
+    </div>
+</body>
+</html>
