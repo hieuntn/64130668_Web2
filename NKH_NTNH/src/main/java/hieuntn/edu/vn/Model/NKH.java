@@ -74,6 +74,17 @@ public class NKH {
     )
     @JsonManagedReference
     private Set<BaiBao> baiBaoSangTac = new HashSet<>();    
+    
+    
+    @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @JoinTable(
+        name = "thamgiacongtrinh",
+        joinColumns = @JoinColumn(name = "NKH_ID"),
+        inverseJoinColumns = @JoinColumn(name = "CONGTRINH_ID")
+    )
+    @JsonManagedReference
+    
+    private List<CongTrinh> nkh_thamgiacongtrinh = new ArrayList<>();
     // Getters and Setters
     public int getNkhId() { return nkhId; }
     public void setNkhId(int nkhId) { this.nkhId = nkhId; }
@@ -128,5 +139,14 @@ public class NKH {
     public int getTongBaiBao() {
     	return baiBaoSangTac.size();
     }
+    
+    public List<CongTrinh> getNkh_thamgiacongtrinh() {
+        return nkh_thamgiacongtrinh;
+    }
+
+    public void setNkh_thamgiacongtrinh(List<CongTrinh> nkh_thamgiacongtrinh) {
+        this.nkh_thamgiacongtrinh = nkh_thamgiacongtrinh;
+    }
+
     
 }

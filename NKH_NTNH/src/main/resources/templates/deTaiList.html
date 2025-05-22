@@ -51,7 +51,7 @@
                         <h3 th:text="${project.tenDeTai} ?: 'Không có tên đề tài'">Tên đề tài</h3>
                         <p><strong>Đơn vị chủ trì:</strong> <span th:text="${project.donViChuTri} ?: 'Không có đơn vị'">Đơn vị</span></p>
                         <p><strong>Tình trạng:</strong> <span th:text="${project.tinhTrang} ?: 'Không có tình trạng'">Tình trạng</span></p>
-                        <p><strong>Người tham gia:</strong>
+                        <p><strong>Tác giả:</strong>
                  			<span th:if="${project.nghienCuu.isEmpty()}">
         					Chưa có người tham gia
    							</span>
@@ -62,7 +62,7 @@
                         <div>
                         	<a th:href="@{/detai/view/{id}(id=${project.id})}" class="button">Xem</a>
                             <a th:href="@{/detai/edit/{id}(id=${project.id})}" class="button">Chỉnh sửa</a>
-                            <a th:href="@{/detai/delete/{id}(id=${project.id})}" class="button" onclick="return confirm('Bạn có chắc chắn muốn xóa nhà khoa học này?')">Xóa</a>
+                            <a th:href="@{/detai/delete/{id}(id=${project.id})}" class="button" onclick="return confirm('Bạn có chắc chắn muốn xóa đề tài này?')">Xóa</a>
                         </div>
                     </div>
                 </div>

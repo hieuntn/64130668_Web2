@@ -63,6 +63,8 @@ public class DeTaiController {
 	        dtService.updateDeTaiKH(deTaiKH, nkhIds);
 	        return "redirect:/detai";
 	    }
+	    
+	    
 	    @GetMapping("/detai/view/{id}")
 	    public String showViewForm(@PathVariable("id") String id, Model model) {
 	        DeTaiKH deTaiKH = dtService.getDeTaiById(id)

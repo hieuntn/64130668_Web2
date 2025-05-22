@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Thêm công trình thực tiễn</title>
+	    <!-- Liên kết CSS -->
+    <link rel="stylesheet" th:href="@{/css/congtrinh_add.css}">
+</head>
+<body>
+    <aside th:replace="layout/sidebar::sidebar"></aside>
+
+    <main class="main">
+        <div class="container">
+            <h2>THÊM CÔNG TRÌNH THỰC TIỄN</h2>
+            <form class="add-form" th:action="@{/congtrinh/add}" th:object="${congTrinh}" method="post">
+                <div class="form-row">
+                    <label for="congTrinhID">Mã công trình:</label>
+                    <input type="text" id="congTrinhID" th:field="*{congTrinhID}" placeholder="Nhập mã công trình (VD: C02)" required>
+                    <span th:errors="*{congTrinhID}" class="error"></span>
+                </div>
+                <div class="form-row">
+                    <label for="tenCongTrinh">Tên công trình:</label>
+                    <textarea id="tenCongTrinh" th:field="*{tenCongTrinh}" placeholder="Nhập tên công trình" required></textarea>
+                    <span th:errors="*{tenCongTrinh}" class="error"></span>
+                </div>
+                <div class="form-row">
+                    <label for="hinhThuc">Hình thức:</label>
+                    <input type="text" id="hinhThuc" th:field="*{hinhThuc}" placeholder="Nhập hình thức (VD: Sáng kiến)" required>
+                    <span th:errors="*{hinhThuc}" class="error"></span>
+                </div>
+                <div class="form-row">
+                    <label for="quyMo">Quy mô:</label>
+                    <input type="text" id="quyMo" th:field="*{quyMo}" placeholder="Nhập quy mô (VD: Cấp cơ sở)" required>
+                    <span th:errors="*{quyMo}" class="error"></span>
+                </div>
+                <div class="form-row">
+                    <label for="noiApDung">Nơi áp dụng:</label>
+                    <input type="text" id="noiApDung" th:field="*{noiApDung}" placeholder="Nhập nơi áp dụng" required>
+                    <span th:errors="*{noiApDung}" class="error"></span>
+                </div>
+                <div class="form-row">
+                    <label for="namBatDau">Năm bắt đầu:</label>
+                    <input type="date" id="namBatDau" th:field="*{namBatDau}" required>
+                    <span th:errors="*{namBatDau}" class="error"></span>
+                </div>
+                <div class="form-row">
+                    <label for="namKetThuc">Năm kết thúc:</label>
+                    <input type="date" id="namKetThuc" th:field="*{namKetThuc}" required>
+                    <span th:errors="*{namKetThuc}" class="error"></span>
+                </div>
+                <div class="form-row">
+                    <label>Nhà khoa học tham gia:</label>
+                    <div class="nkh-checkbox-container">
+                        <table class="nkh-table">
+                            <tbody>
+                                <tr th:each="nkh : ${nkhList}">
+                                    <td class="checkbox-cell">
+                                        <input type="checkbox" 
+                                               th:id="'nkh_' + ${nkh.nkhId}" 
+                                               th:value="${nkh.nkhId}" 
+                                               name="nkhIds" 
+                                               class="nkh-checkbox"
+                                               th:checked="${nkhIds != null && #arrays.contains(nkhIds, nkh.nkhId)}" />
+                                    </td>
+                                    <td class="name-cell">
+                                        <label th:for="'nkh_' + ${nkh.nkhId}" th:text="${nkh.hoTen}" class="nkh-name"></label>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="button-group">
+                    <button type="submit" class="save-btn">Lưu</button>
+                    <a th:href="@{/congtrinh}" class="cancel-btn">Hủy</a>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
