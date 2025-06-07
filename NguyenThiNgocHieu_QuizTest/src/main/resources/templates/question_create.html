@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Question - QuizMaster</title>
+	<link rel="stylesheet" th:href="@{/css/question_create.css}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Tạo câu hỏi mới</h1>
+            <p>Thêm câu hỏi thú vị để làm phong phú thêm bộ sưu tập quiz của bạn</p>
+        </div>
+        
+        <div class="form-container">
+           
+            <div th:if="${error}" class="alert error" th:text="${error}"></div>
+            <div th:if="${success}" class="alert success" th:text="${success}"></div>
+
+            <form action="/question/create" method="post">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="quizId">Chọn Quiz</label>
+                        <select id="quizId" name="quizId" required>
+                            <option value="">-- Chọn một Quiz --</option>
+                            <option th:each="quiz : ${quizzes}"
+                                    th:value="${quiz.quizID}"
+                                    th:text="${quiz.quizName}"></option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="question">Câu hỏi</label>
+                        <textarea id="question" name="question" placeholder="Nhập nội dung câu hỏi của bạn..." required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="marks">Điểm số</label>
+                        <input type="number" id="marks" name="marks" step="0.01" min="0" placeholder="Nhập điểm số (VD: 2.50)" required />
+                    </div>
+
+                    <div class="options-section">
+                        <div class="options-title">Các lựa chọn (cần chính xác 4 lựa chọn)</div>
+                        
+                        <div class="option-container">
+                            <div class="option-number">1</div>
+                            <input type="text" name="options" placeholder="Nhập lựa chọn thứ 1" required />
+                            <div class="radio-wrapper">
+                                <input type="radio" name="correctAnswerIndex" value="0" id="correct0" required />
+                                <label for="correct0">Đúng</label>
+                            </div>
+                        </div>
+                        
+                        <div class="option-container">
+                            <div class="option-number">2</div>
+                            <input type="text" name="options" placeholder="Nhập lựa chọn thứ 2" required />
+                            <div class="radio-wrapper">
+                                <input type="radio" name="correctAnswerIndex" value="1" id="correct1" required />
+                                <label for="correct1">Đúng</label>
+                            </div>
+                        </div>
+                        
+                        <div class="option-container">
+                            <div class="option-number">3</div>
+                            <input type="text" name="options" placeholder="Nhập lựa chọn thứ 3" required />
+                            <div class="radio-wrapper">
+                                <input type="radio" name="correctAnswerIndex" value="2" id="correct2" required />
+                                <label for="correct2">Đúng</label>
+                            </div>
+                        </div>
+                        
+                        <div class="option-container">
+                            <div class="option-number">4</div>
+                            <input type="text" name="options" placeholder="Nhập lựa chọn thứ 4" required />
+                            <div class="radio-wrapper">
+                                <input type="radio" name="correctAnswerIndex" value="3" id="correct3" required />
+                                <label for="correct3">Đúng</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="btn-container">
+                    <a href="/admin" class="btn btn-secondary">Quay lại danh sách Quiz</a>
+                    <button type="submit" class="btn btn-primary">Tạo câu hỏi</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

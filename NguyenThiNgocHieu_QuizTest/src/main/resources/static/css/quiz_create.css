@@ -1,0 +1,204 @@
+@charset "UTF-8";
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* ========== SIDEBAR CSS BẮT ĐẦU TỪ ĐÂY ========== */
+        .sidebar {
+            width: 260px;
+            background: #6c5ce7;
+            color: white;
+            min-height: 100vh;
+            padding: 20px 15px;
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            left: 0;
+            top: 0;
+            gap: 20px;
+            z-index: 1000;
+        }
+
+        .sidebar .logo {
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .sidebar .logo span {
+            color: #ffeaa7;
+        }
+
+        .sidebar nav {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .sidebar nav a {
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+            font-size: 15px;
+            display: block;
+            font-weight: 500;
+        }
+
+        .sidebar nav a:hover,
+        .sidebar nav a.active {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        /* ========== SIDEBAR CSS KẾT THÚC Ở ĐÂY ========== */
+        
+        /* Main Content Styles */
+        .main-content {
+            margin-left: 260px; /* Để tránh sidebar */
+            padding: 40px 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            padding: 40px;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #2d3436;
+            margin-bottom: 30px;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #2d3436;
+            font-weight: 500;
+            font-size: 16px;
+        }
+        
+        input[type="text"] {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #dfe6e9;
+            border-radius: 8px;
+            font-size: 16px;
+            background-color: #f5f7fa;
+            transition: border-color 0.3s, background-color 0.3s;
+        }
+        
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #6c5ce7;
+            background-color: white;
+        }
+        
+        input[type="text"]::placeholder {
+            color: #636e72;
+        }
+        
+        button {
+            width: 100%;
+            background-color: #6c5ce7;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            margin-top: 10px;
+        }
+        
+        button:hover {
+            background-color: #5a4fcf;
+            transform: translateY(-2px);
+        }
+        
+        button:active {
+            transform: translateY(0);
+        }
+        
+        .link-container {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 25px;
+            border-top: 2px solid #f5f7fa;
+        }
+        
+        .nav-link {
+            color: #6c5ce7;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 16px;
+            padding: 10px 20px;
+            border: 2px solid #6c5ce7;
+            border-radius: 8px;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+        
+        .nav-link:hover {
+            background-color: #6c5ce7;
+            color: white;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            /* ========== SIDEBAR RESPONSIVE CSS BẮT ĐẦU ========== */
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                min-height: auto;
+            }
+            
+            .sidebar nav {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .sidebar nav a {
+                flex: 1;
+                min-width: 120px;
+                text-align: center;
+            }
+            /* ========== SIDEBAR RESPONSIVE CSS KẾT THÚC ========== */
+            
+            .main-content {
+                margin-left: 0; /* Bỏ margin khi sidebar không fixed */
+            }
+            
+            .container {
+                margin: 0 10px;
+                padding: 30px 20px;
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
+        }

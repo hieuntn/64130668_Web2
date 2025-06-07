@@ -18,14 +18,18 @@ public class Quiz {
     @Column(name = "QUIZ_NAME")
     private String quizName;
 
+    @Column(name = "HINH_ANH") 
+    private String hinhAnh;
+
     @OneToMany(mappedBy = "quiz", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Question> questions;
 
     public Quiz() {}
 
-    public Quiz(String quizID, String quizName) {
+    public Quiz(String quizID, String quizName, String hinhAnh) {
         this.quizID = quizID;
         this.quizName = quizName;
+        this.hinhAnh = hinhAnh;
     }
 
     public String getQuizID() {
@@ -42,6 +46,14 @@ public class Quiz {
 
     public void setQuizName(String quizName) {
         this.quizName = quizName;
+    }
+
+    public String getHinhAnh() {
+        return hinhAnh;
+    }
+
+    public void setHinhAnh(String hinhAnh) {
+        this.hinhAnh = hinhAnh;
     }
 
     public List<Question> getQuestions() {

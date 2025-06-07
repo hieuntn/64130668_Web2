@@ -30,6 +30,9 @@ public class QuizService {
 	public List<Quiz> getAllQuizzes() {
         return quizRepository.findAll();
     }
+	public Quiz createQuiz(Quiz quiz) {
+		return quizRepository.save(quiz);
+	}
 	// Lấy danh sách câu hỏi và các lựa chọn của một Quiz
     public Map<String, Object> getQuizQuestions(String quizId) {
         List<Question> questions = questionRepository.findByQuizQuizID(quizId);

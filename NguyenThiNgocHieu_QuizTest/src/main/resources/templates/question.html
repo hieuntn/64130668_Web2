@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizMaster - Chi tiết Quiz</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<link rel="stylesheet" th:href="@{/css/question.css}">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div th:replace="layout/sidebar::sidebar"></div>
+
+   
+		<!-- Top Bar -->
+   	 <div th:replace="layout/topbar::topbar"></div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="container">
+            <!-- Page Header -->
+            <div class="page-header">
+                <div class="page-header-content">
+                    <h1><i class="fas fa-quiz"></i> Chi tiết Quiz</h1>
+                    
+
+                </div>
+                <a th:href="@{/question/create(quizId=${quizId})}" class="add-question-btn btn-link">
+                    <i class="fas fa-plus"></i> Thêm câu hỏi mới
+                </a>
+            </div>
+
+            <!-- Questions List -->
+            <div th:if="${questions != null and !questions.isEmpty()}">
+                <div th:each="question, iterStat : ${questions}" class="question">
+                    <div class="question-header">
+                        <h3 th:text="${question.questionName}">Tên câu hỏi</h3>
+                        <div class="question-meta">
+                            <i class="fas fa-list-ol"></i> Câu <span th:text="${iterStat.count}">1</span>
+                        </div>
+                    </div>
+                    
+                    <div class="question-content">
+                        <div class="options-label">
+                            <i class="fas fa-check-circle"></i> Lựa chọn trả lời:
+                        </div>
+                        
+                        <div class="options-container">
+                            <div th:each="option : ${question.options}" 
+                                 th:class="${option.rightAnswer} ? 'option correct' : 'option incorrect'">
+                                <i th:class="${option.rightAnswer} ? 'fas fa-check-circle' : 'fas fa-times-circle'"></i>
+                                <span th:text="${option.optionName}">Tùy chọn mẫu</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="add-buttons">
+                        <button class="edit-btn">
+                            <i class="fas fa-edit"></i> Sửa câu hỏi
+                        </button>
+                        <form th:action="@{/question/delete/{questionId}(questionId=${question.questionId})}" method="post" 
+                              onsubmit="return confirm('Bạn có chắc muốn xóa câu hỏi này không?')" style="display: inline;">
+                            <input type="hidden" name="quizId" th:value="${quizId}"/>
+                            <button type="submit" class="delete-btn">
+                                <i class="fas fa-trash-alt"></i> Xóa câu hỏi
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Empty State -->
+            <div th:if="${questions == null or questions.isEmpty()}" class="empty-state">
+                <i class="fas fa-question-circle"></i>
+                <h3>Chưa có câu hỏi nào</h3>
+                <p>Quiz này chưa có câu hỏi. Hãy thêm câu hỏi đầu tiên để bắt đầu!</p>
+                <a th:href="@{/question/create(quizId=${quizId})}" class="add-question-btn btn-link">
+                    <i class="fas fa-plus"></i> Thêm câu hỏi đầu tiên
+                </a>
+            </div>
+
+            
+            <div class="add-question-section">
+                <p style="margin-bottom: 20px; color: #636e72;">Muốn thêm câu hỏi mới cho quiz này?</p>
+                <a th:href="@{/question/create(quizId=${quizId})}" class="add-question-btn btn-link">
+                    <i class="fas fa-plus"></i> Thêm câu hỏi
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

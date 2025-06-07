@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizMaster - Danh sách Quiz</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<link rel="stylesheet" th:href="@{/css/admin_page.css}">
+</head>
+<body>
+    <!-- Sidebar -->
+	<div th:replace ="layout/sidebar::sidebar"></div>
+
+    <!-- Top Bar -->
+    <div th:replace="layout/topbar::topbar"></div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="container">
+            
+            
+            <div th:if="${quizzes.isEmpty()}">
+                <div class="empty-state">
+                    <h3>Không có quiz nào</h3>
+                    <p>Hiện tại không có quiz nào khả dụng. Hãy quay lại sau!</p>
+                </div>
+            </div>
+            
+            <div class="quiz-list" th:unless="${quizzes.isEmpty()}">
+    <div class="quiz-card" th:each="quiz : ${quizzes}">
+        <div class="quiz-image">
+    		<img th:src="${quiz.hinhAnh != null && quiz.hinhAnh != '' ? quiz.hinhAnh : '/img/banner_quiz.png'}" alt="Quiz Image" />
+		</div>
+        <div class="quiz-content">
+            <h3 class="quiz-title" th:text="${quiz.quizName}"></h3>
+            <div class="quiz-info">
+                <span th:text="${quiz.questions != null ? quiz.questions.size() : 0} + ' câu hỏi'"></span>
+            </div>
+             <a th:href="@{/question/{quizId}(quizId=${quiz.quizID})}" class="btn">Xem</a>
+          
+           
+        </div>
+    </div>
+</div>
+        </div>
+        
+        <footer>
+            <div class="container">
+                <ul class="footer-links">
+                    <li><a href="#">Về chúng tôi</a></li>
+                    <li><a href="#">Điều khoản sử dụng</a></li>
+                    <li><a href="#">Chính sách bảo mật</a></li>
+                    <li><a href="#">Trợ giúp</a></li>
+                </ul>
+                <p class="copyright">© 2025 QuizMaster. Nguyễn Thị Ngọc Hiếu.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
+

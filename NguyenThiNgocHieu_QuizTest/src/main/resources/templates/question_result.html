@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - QuizMaster</title>
+    <link rel="stylesheet" th:href="@{/css/question_result.css}">
+
+</head>
+<body>
+   <header th:replace="layout/header::header"></header>
+
+    <section class="quiz-content">
+        <div class="container">
+            <h1 class="quiz-title">Câu hỏi Quiz</h1>
+            
+            <div th:each="question, iterStat : ${questions}" class="question">
+                <h3 th:text="${question.questionName}"></h3>
+                <p class="question-label">Lựa chọn trả lời:</p>
+                <div class="options-container">
+                    <div th:each="option : ${question.options}" 
+                         th:class="${option.rightAnswer} ? 'option correct' : 'option incorrect'">
+                        <span th:text="${option.optionName}">Đáp án mẫu</span>
+                    </div>
+                </div>
+                
+            </div>
+            
+            
+    </section>
+
+    <footer>
+        <div class="container">
+            <ul class="footer-links">
+                <li><a href="#">Về chúng tôi</a></li>
+                <li><a href="#">Điều khoản sử dụng</a></li>
+                <li><a href="#">Chính sách bảo mật</a></li>
+                <li><a href="#">Trợ giúp</a></li>
+            </ul>
+            <p class="copyright">© 2025 QuizMaster - Nguyễn Thị Ngọc Hiếu</p>
+        </div>
+    </footer>
+</body>
+</html>
